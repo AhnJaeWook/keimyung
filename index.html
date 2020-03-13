@@ -183,11 +183,7 @@
             padding: 3px 8px 3px 8px;
         }
 
-        @media ( min-width: 768px ) {
-            .footer{
-                width: 800px;
-            }
-        }
+        
         @media ( max-width: 768px ) {
             .circle_box{
                 width: 100%;
@@ -202,6 +198,28 @@
 
             .under_box{
                 font-size: 6px;
+            }
+
+            #program img{
+                width: 100%;
+            }
+
+            .footer{
+                grid-template-columns: repeat(4, 120px);
+            }
+
+            .footer div img{
+                width: 25px;
+                height: 25px;
+            }
+
+            .footer div a:nth-child(3) img{
+                width: 40px;
+                height: 40px;
+            }
+
+            .contack{
+                width: 450px;
             }
         }
 
@@ -227,12 +245,12 @@
     <div style="margin-bottom: 100px;" id="main">
         <img src="main_2.png" width="100%" />
     </div>
-    <div id="program">
-        <img src="program_02.png" width="100%"/>
+    <div id="program" style="text-align: center;">
+        <img src="3word.jpg" width="70%"/>
     </div>
     <div id="schedule" style="text-align: center; margin-top: 80px;">
         <h1 style="color: orange;">Schedule</h1>
-        <img src="schdule.png" width="70%"/>
+        <img src="schdule.png" width="60%"/>
     </div>
     <div id="admin" class="out_name_box">
         <div class="name_box" style="text-align: center;">
@@ -281,11 +299,11 @@
         <input type="button" value="지원하기" onclick="submit()">
     </div>
     <div class="footer">
-        <img src="footer.png" width="800px"/>
+        <img class="contack" src="footer.png" width="800px"/>
         <div>
             <a href="http://pf.kakao.com/_MxlrWj/chat"><img style="margin: 0 5px 10px 0;" src="kakao.jpg" width="50px" height="50px"/></a>
             <a href="https://www.facebook.com/likelionkelmyung"><img style="margin-bottom: 10px;" src="facebook.png" width="50px" height="50px"/></a>
-            <a href="https://www.instagram.com/explore/locations/353322308730461/"><img src="instagram.jpg" width="70px" height="70px"/></a>
+            <a href="https://www.instagram.com/kmu_likelion/?hl=ko"><img src="instagram.jpg" width="70px" height="70px"/></a>
         </div>
     </div>
 </body>
