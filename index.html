@@ -144,8 +144,45 @@
         }
 
         .footer{
-            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(5, 300px);
         }
+        .footer img:nth-child(1){
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+        .footer div{
+            grid-column-start: 4;
+            grid-column-end: 5;
+            justify-self: center;
+            align-self: end;
+        }
+        
+        .resume{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: black;
+            height: 270px;
+        }
+
+        .resume p{font-size: 30px; color: white; align-self: center; height: 100px;}
+        .resume a{font-size: 15px; float: right;}
+
+        .resume input{
+            border-radius: 25px;
+            border: 1px solid orange;
+            background: orange;
+            color: white;
+            font-size: 25px;
+            padding: 5px 10px 5px 10px;
+        }
+
+        .resume input:hover{
+            cursor: pointer;
+            padding: 3px 8px 3px 8px;
+        }
+
         @media ( min-width: 768px ) {
             .footer{
                 width: 800px;
@@ -169,6 +206,12 @@
         }
 
     </style>
+    <script>
+        function submit(){
+            alert("지금은 모집기간이 아닙니다.(3.16 ~ 3/30)");
+            // location.href = '#';
+        }
+    </script>
 </head>
 <body>
     <div class="nav">
@@ -178,6 +221,7 @@
             <a href="#program">강의진행</a>
             <a href="#schedule">일정</a>
             <a href="#admin">운영진소개</a>
+            <a href="#submit">지원하기</a>
         </div>
     </div>
     <div style="margin-bottom: 100px;" id="main">
@@ -232,8 +276,17 @@
             </div>
         </div>
     </div>
-    <div>
-        <img class="footer" src="footer.png"/>
+    <div id="submit" class="resume">
+        <p>계명대학교 멋쟁이 사자처럼<br><a> 8기 학생 모집 </a><br><a>모집기간: 3/16 ~ 3/30</a><p>
+        <input type="button" value="지원하기" onclick="submit()">
+    </div>
+    <div class="footer">
+        <img src="footer.png" width="800px"/>
+        <div>
+            <a href="http://pf.kakao.com/_MxlrWj/chat"><img style="margin: 0 5px 10px 0;" src="kakao.jpg" width="50px" height="50px"/></a>
+            <a href="https://www.facebook.com/likelionkelmyung"><img style="margin-bottom: 10px;" src="facebook.png" width="50px" height="50px"/></a>
+            <a href="https://www.instagram.com/explore/locations/353322308730461/"><img src="instagram.jpg" width="70px" height="70px"/></a>
+        </div>
     </div>
 </body>
 </html>
