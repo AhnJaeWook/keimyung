@@ -3,322 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="title.ico">
-    <title>KMU x LIKELION</title>
-    <style>
-        body{
-            margin: 0;
-            min-width: 350px;
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-        }
-        .nav{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            background-color: rgba( 255, 255, 255, 0.5 );
-            width: 80%;
-            padding-left: 10%;
-            padding-right: 10%;
-            height: 70px;
-        }
-        .nav div{
-            display: flex;
-            flex-direction: row;
-            width: 40%;
-        }
-        .nav div a{
-            margin-left: 5px;
-            margin-right: 5px;
-            flex-grow: 1;
-            text-decoration: none;
-            color: black;
-        }
-
-        @font-face {
-            font-family: 'KoPubWorld_Dotum';
-            src: url(KOPUBWORLD_TTF_FONTS/KoPubWorld_Dotum_Medium.ttf) format('truetype')
-        }
-        .out_name_box{
-            display:flex;
-            margin-top: 100px;
-            margin-bottom: 100px;
-        }
-        .name_box{
-            width: 100%;
-            height: 500px;
-            /* border: 1px solid black; */
-        }
-        .out_circle_box{
-            display:grid;
-            grid-template-columns:repeat(8.333334%,12);
-            grid-template-rows: 250px 250px;
-        }
-        .circle_box{
-            text-align: center;
-            display:flex;
-            justify-content: center;
-            margin-top:5%;
-            width:auto;
-            height:60%;
-            border-radius: 100%; 
-            background-size: cover;
-        }
-        .out_circle_box div:nth-child(1) .circle_box{
-            background-image: url("jaewook.jpg");
-        }
-        .out_circle_box div:nth-child(2) .circle_box{
-            background-image: url("suhwan1.jpg");
-        }
-        .out_circle_box div:nth-child(3) .circle_box{
-            background-image: url("leeb.jpg");
-        }
-        .out_circle_box div:nth-child(4) .circle_box{
-            background-image: url("hyeonmin.jpg");
-        }
-        .out_circle_box div:nth-child(5) .circle_box{
-            background-image: url("uiyeon.jpg");
-        }
-        .out_circle_box div:nth-child(6) .circle_box{
-            background-image: url("seunghwan.jpg");
-        }
-        .out_circle_box div:nth-child(7) .circle_box{
-            background-image: url("hyeonji.jpg");
-        }
-        .under_box{
-            font-family:KoPubWorld_Dotum;
-            /* border:2px solid #aba196; */
-            width:auto;
-            height:60px;
-            margin-top:160px;
-        }
-        .item1{
-            display:flex;
-            justify-content: center;
-            grid-column: 1/5;
-            /* border: 1px solid black; */
-        }
-        .item2{
-            display:flex;
-            justify-content: center;
-            grid-column: 5/9;
-            /* border: 1px solid black; */
-        }
-        .item3{
-            display:flex;
-            justify-content: center;
-            grid-column: 9/13;
-            /* bor
-            display:flex;
-            justify-content: center;
-            grid-column: 1/4;
-            /* border: 1px solid black; */
-        }
-        .item4{
-            display:flex;
-            justify-content: center;
-            grid-column: 1/4;
-            /* border: 1px solid black; */
-        }
-        .item5{
-            display:flex;
-            justify-content: center;
-            grid-column: 4/7;
-            /* border: 1px solid black; */
-        }
-        .item6{
-            display:flex;
-            justify-content: center;
-            grid-column: 7/10;
-            /* border: 1px solid black; */
-        }
-        .item7{
-            display:flex;
-            justify-content: center;
-            grid-column: 10/13;
-            /* border: 1px solid black; */
-        }
-
-        .footer{
-            display: grid;
-            grid-template-columns: repeat(5, 300px);
-        }
-        .footer img:nth-child(1){
-            grid-column-start: 1;
-            grid-column-end: 2;
-        }
-        .footer div{
-            grid-column-start: 4;
-            grid-column-end: 5;
-            justify-self: center;
-            align-self: end;
-        }
-
-        .footer div a:hover{
-            cursor: pointer;
-        }
-        
-        .resume{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            background: black;
-            height: 270px;
-        }
-
-        .resume p{font-size: 30px; color: white; align-self: center; height: 100px;}
-        .resume a{font-size: 15px; float: right;}
-
-        .resume input{
-            border-radius: 25px;
-            border: 1px solid orange;
-            background: orange;
-            color: white;
-            font-size: 25px;
-            padding: 5px 10px 5px 10px;
-        }
-
-        .resume input:hover{
-            cursor: pointer;
-            padding: 3px 8px 3px 8px;
-        }
-
-        
-        @media ( max-width: 768px ) {
-            .circle_box{
-                width: 100%;
-                margin: 10px;
-                height: 60%;
-
-            }
-
-            .nav div a{
-                visibility: hidden;
-            }
-
-            .under_box{
-                font-size: 6px;
-            }
-
-            #program img{
-                width: 100%;
-            }
-
-            #schedule img{
-                width: 400px;
-            }
-
-            .footer{
-                grid-template-columns: repeat(3, 130px);
-            }
-
-            .footer div img{
-                width: 25px;
-                height: 25px;
-            }
-
-            .footer div a:nth-child(3) img{
-                width: 40px;
-                height: 40px;
-            }
-
-            .footer div{
-                grid-column-start: 3;
-                grid-column-end: 4;
-                justify-self: center;
-                align-self: end;
-            }
-
-            .contack{
-                width: 400px;
-            }
-        }
-
-    </style>
-    <script>
-        function submit(){
-            alert("지금은 모집기간이 아닙니다.(3.16 ~ 3/30)");
-        }
-    </script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+    <link rel="stylesheet" type="text/css" href="css/likelion2021.css">
+    <title>2021 멋쟁이사자처럼 at 계명대</title>
 </head>
 <body>
-    <div class="nav">
-        <a>멋쟁이사자처럼 x 계명대학교</a>
-        <div>
+    <!-- nav -->
+    <div class="navTop">
+        <div class="logo">
+            <a>멋쟁이사자처럼 x 계명대학교</a>
+        </div>
+
+        <div class="nav_button">
             <a href="#main">멋사소개</a>
-            <a href="#program">강의진행</a>
-            <a href="#schedule">일정</a>
+            <!--1-->
             <a href="#admin">운영진소개</a>
+            <!--2-->
+            <a href="#curriculum">일정</a>
+            <!--3-->
             <a href="#submit">지원하기</a>
+            <!--4-->
         </div>
     </div>
-    <div style="margin-bottom: 100px;" id="main">
-        <img src="main_2.png" width="100%" />
-    </div>
-    <div id="program" style="text-align: center;">
-        <img src="3word.jpg" width="70%"/>
-    </div>
-    <div id="schedule" style="text-align: center; margin-top: 80px;">
-        <h1 style="color: orange;">Schedule</h1>
-        <img src="schdule2020.PNG" width="80%"/>
-    </div>
-    <div id="admin" class="out_name_box">
-        <div class="name_box" style="text-align: center;">
-            <h1 style="color: orange;">운영진소개</h1>
-            <div class="out_circle_box">
-                <div class="item1">        
-                    <div class="circle_box">
-                        <div class="under_box"> 8기 계대 멋사 운영진<br><b>안재욱</b></div>
-                    </div>
-                </div>
-                <div class="item2">
-                    <div class="circle_box">
-                        <div class="under_box"> 8기 계대 멋사 운영진<br><b>김수환</b></div>
-                    </div>
-                </div>
-                <div class="item3">
-                    <div class="circle_box">
-                        <div class="under_box"> 8기 계대 멋사 운영진<br><b>이병률</b></div>
-                    </div>
-                </div>
-                <div class="item4">
-                    <div class="circle_box">
-                        <div class="under_box"> 8기 계대 멋사 운영진<br><b>김현민</b></div>
-                    </div>
-                </div>
-                <div class="item5">            
-                    <div class="circle_box">
-                        <div class="under_box"> 8기 계대 멋사 운영진<br><b>임의연</b></div>
-                    </div>
-                </div>
-                <div class="item6">
-                    <div class="circle_box">
-                        <div class="under_box"> 8기 계대 멋사 운영진<br><b>김승환</b></div>
-                    </div>
-                </div>
-                <div class="item7">
-                    <div class="circle_box">
-                        <div class="under_box"> 8기 계대 멋사 운영진<br><b>김현지</b></div>
-                    </div>
-                </div>
-            </div>
+
+    <!--section #1-->
+    <div class="wrap">
+
+        <div class="wrap_content" id="title">
+            <p style=" font-size:2.5vw; color: #6b6a6a;">멋쟁이 사자처럼 계명대학교</p>
+            <p style=" font-family: 'NanumSquare', sans-serif; font-weight: 900; font-size:6vw;"><span style="color:#e9b655 ;">LIKELION</span><span style="color:#8f8d8d;">x</span><span style="color: #0068b7;">KMU</span></p>
+        </div>
+        <img src="img/1.png" alt="banner" id="main">
+
+        <div class="wrap_content" id="content">
+            <p> <b>자체 개발된 온라인 강의 플랫폼'클래스 라이언'</b>을 통해 강의를 듣고 과제를 수행합니다.</p>
+            <P>다양한 오프라인 활동과 병행하여 뜻을 같이하는 동료를 찾고, <b>자신이 만들고자 하는</b></P>
+            <P> <b>서비스를 직접 프로그래밍</b> 하도록 돕습니다.</P>
         </div>
     </div>
-    <div id="submit" class="resume">
-        <p>계명대학교 멋쟁이 사자처럼<br><a> 8기 학생 모집 </a><br><a>모집기간: 3/16 ~ 3/30</a><p>
-        <input type="button" value="지원하기" onclick="submit()">
+
+    <!--secton #2-->
+
+    <img src="img/2.png" class="section2Img" id="admin">
+
+
+    <!--section #3-->
+    <div class = "curriculum">
+        <img src="img/3.png" class="section3Img" alt="" loading="lazy" id="curriculum">
     </div>
-    <div class="footer">
-        <img class="contack" src="footer.png" width="800px"/>
-        <div>
-            <a href="http://pf.kakao.com/_MxlrWj/chat"><img style="margin: 0 5px 10px 0;" src="kakao.jpg" width="50px" height="50px"/></a>
-            <a href="https://www.facebook.com/likelionkeimyung"><img style="margin-bottom: 10px;" src="facebook.png" width="50px" height="50px"/></a>
-            <a href="https://www.instagram.com/kmu_likelion/?hl=ko"><img src="instagram.jpg" width="70px" height="70px"/></a>
+
+    <!--section #4-->
+    <!-- 여기 그 마지막 페이지 랩으로 감싸둠 알아서 바꿀 수 있음 -->
+    <div class = "lastPageWrap">
+        <div class ="lastPage">
+            <img src="img/4.png" alt="" loading="lazy">
         </div>
-    </div>
+        <div class ="lastTitle" id="submit">
+            <h2>계명대학교 멋쟁이 사자처럼</h2>
+            <h2>9기 모집</h2>
+        </div>
+        <form>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdMvrPIO_DuJSVS_WOAbanOOPUE_1Z8engKmiI_AV4aPAsrKg/viewform" class="button">지원하기</a> <!--지원링크 삽입-->
+        </form>
+        <div class ="lastSentence">
+            <p>
+                우)대구광역시 달서구 달구벌대로 1095 계명대학교 성서캠퍼스
+            </p>
+            <p>
+                INSTAGRAM : kmu_likelion
+            </p>
+            <p>
+                EMAIL : qq212420@gmail.com
+            </p>
+            <br>
+            <p>
+                COPYRIGHT 2021 KEIMYUNG UNIVERSITY LIKELION
+            </p>
+            <p>
+                ALL RIGHTS RESERVED
+            </p>
+        </div>
+    </div>    
 </body>
 </html>

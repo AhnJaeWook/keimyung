@@ -1,0 +1,177 @@
+/*nav*/
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+a:link{
+    color: black;
+    text-decoration: none;
+}
+body{ font-family: Consoles, sans-serif; }
+
+.navTop {
+    display: flex;
+    z-index: 999;
+    position: fixed;
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.5);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    float: left;
+    min-width: 250px;
+}
+
+.nav_button {
+    float: right;
+    margin-right: 20px;
+    min-width: 400px;
+    color: black;
+}
+
+.nav div {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+}
+
+.nav div a {
+    margin-left: 5px;
+    margin-right: 5px;
+    flex-grow: 1;
+    text-decoration: none;
+    color: black;
+}
+
+#admin>img {
+    width: 100%;
+    min-width: 1200px;
+}
+
+/*section #1*/
+.wrap{
+    font-family: 'NanumSquare',sans-serif;
+    position: relative;
+}
+img{
+    max-width: 100%;
+    display: block;
+    
+}
+.wrap_content{ 
+    /* border: solid 3px blue; */
+    position: absolute;            
+}
+p{margin: 0;}
+
+span{padding: 5px;}
+
+#title{
+    left: 28%;
+    top: 15%;
+}
+
+#content{
+    font-size: 1.5vw;
+    color: #60503f;
+    width: 60%;
+    top: 90%;
+    left:22%;
+    text-align: center;
+    line-height: 2;
+}
+/*section #2*/
+.section2Img{
+    width: 100%;
+    vertical-align: middle;
+}
+/*section #3*/
+body{ 
+    font-family: Consoles, sans-serif; 
+    }
+#curriculum{
+    text-align: center;
+}
+/* 마지막 전 페이지 */
+img{
+    width:100%;
+    vertical-align: middle;
+    }
+/* 마지막장 다 감싼거 여기서 크기 조절 쌉가능 */
+.lastPageWrap{
+    width: 100%;
+    margin: 10rem auto;
+    position: relative;
+}
+/* 마지막장 사진 */
+.lastPage{
+    width: 100%;
+    vertical-align: middle;
+}
+/* 계명대학교 9기 지원하러가기 뭐 그 부분 */
+.lastTitle{
+    padding: 1rem 2rem;
+    text-align: center;
+    position:absolute;
+    top: 35%;
+    left: 50%;
+    transform:translate( -50%, -50%);
+    font-size: 2vmax;
+    color: white;
+}
+/* 인스타 이름이랑 주소 디자인 뭐 어쩌고 그 부분 */
+.lastSentence{
+    text-align: left;
+    position: absolute;
+    top: 72%;
+    left: 40vw;
+    transform:translate( -50%, -50%);
+    font-size: 1.2vmax;
+}
+/* 이 부분은 버튼 상세 변경 사항 */
+:root {
+    --button-color: orange;
+    --button-bg-color: white;
+    --button-hover-bg-color: gray;
+}
+/* 버튼 관련되서 바꾸고 싶다면 이 아래 부분 */
+a.button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+    background: var(--button-bg-color);
+    color: var(--button-color);
+    
+    margin: 0;
+    padding: 0.5rem 1rem;
+    
+    font-family:Consoles, sans-serif; 
+    font-size: 1.7vmax;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate( -50%, -50%);
+    text-decoration: none;
+    
+    border: none;
+    border-radius: 4px;
+    
+    display: inline-block;
+    width: auto;
+    
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+    cursor: pointer;
+}
+a.button:hover,
+a.button:disabled {
+    opacity: 0.5;
+}
