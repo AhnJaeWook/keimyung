@@ -10,7 +10,7 @@ a:link{
 }
 body{ font-family: Consoles, sans-serif; }
 
-.navTop {
+.nav {
     display: flex;
     z-index: 999;
     position: fixed;
